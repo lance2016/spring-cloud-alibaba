@@ -21,8 +21,9 @@
 
     <modules>
         <module>nacos</module>
-        <module>nacos-producer</module>
+        <module>server-order</module>
         <module>server-consumer</module>
+        <module>server-storage</module>
     </modules>
 
     <dependencies>

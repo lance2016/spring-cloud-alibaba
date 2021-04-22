@@ -7,18 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="server-consumer" />
-        <module name="nacos" />
-        <module name="nacos-producer" />
+        <module name="server-storage" />
         <module name="springcloud" />
+        <module name="nacos" />
+        <module name="server-consumer" />
+        <module name="server-order" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="nacos" options="-parameters" />
-      <module name="nacos-producer" options="-parameters" />
       <module name="server-consumer" options="-parameters" />
+      <module name="server-order" options="-parameters" />
+      <module name="server-storage" options="-parameters" />
       <module name="springcloud" options="-parameters" />
     </option>
   </component>

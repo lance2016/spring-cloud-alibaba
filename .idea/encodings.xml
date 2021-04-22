@@ -3,7 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/nacos" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/nacos-producer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-order" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-storage" charset="UTF-8" />
   </component>
 </project>
