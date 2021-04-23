@@ -8,10 +8,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="server-storage" />
-        <module name="springcloud" />
+        <module name="server-order" />
         <module name="nacos" />
         <module name="server-consumer" />
-        <module name="server-order" />
+        <module name="springcloud" />
       </profile>
     </annotationProcessing>
   </component>
