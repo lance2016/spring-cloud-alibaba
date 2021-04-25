@@ -8,15 +8,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="server-storage" />
-        <module name="server-order" />
+        <module name="common" />
         <module name="nacos" />
         <module name="server-consumer" />
-        <module name="springcloud" />
+        <module name="server-order" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="common" options="-parameters" />
       <module name="nacos" options="-parameters" />
       <module name="server-consumer" options="-parameters" />
       <module name="server-order" options="-parameters" />

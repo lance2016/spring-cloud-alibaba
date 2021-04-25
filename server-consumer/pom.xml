@@ -40,6 +40,12 @@
             <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
             <version>${spring-cloud-starter-alibaba-sentinel.version}</version>
         </dependency>
+        <!--        common-->
+        <dependency>
+            <groupId>com.nacos.common</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
     </dependencies>
 
     <build>
