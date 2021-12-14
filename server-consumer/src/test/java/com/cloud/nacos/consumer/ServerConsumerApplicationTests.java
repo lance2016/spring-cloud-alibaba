@@ -29,6 +29,8 @@ class ServerConsumerApplicationTests {
         fieldMatchParam.setColumn_types(map);
         myAlgorithmParameters.setFieldMatch_0(fieldMatchParam);
         System.out.println(JsonUtil.toJson(myAlgorithmParameters));
+
+
     }
 
     @Data
@@ -41,7 +43,6 @@ class ServerConsumerApplicationTests {
     class FieldMatchParam{
         private Map<String,ColumnType> column_types = new HashMap<>();
     }
-
 
     @Data
     @AllArgsConstructor

@@ -7,10 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="server-storage" />
+        <module name="server-consumer" />
         <module name="common" />
         <module name="nacos" />
-        <module name="server-consumer" />
+        <module name="server-storage" />
         <module name="server-order" />
       </profile>
     </annotationProcessing>

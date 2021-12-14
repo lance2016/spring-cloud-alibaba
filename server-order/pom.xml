@@ -9,9 +9,9 @@
 	</parent>
 
 	<groupId>com.cloud.nacos.producer</groupId>
-	<artifactId>nacos-producer</artifactId>
+	<artifactId>server-order</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>nacos-producer</name>
+	<name>server-order</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
