@@ -23,7 +23,6 @@ public class ConsumerController {
 
     @GetMapping("/buy/{userName}/{productName}/{num}")
     public String buy(@PathVariable("userName") String userName, @PathVariable("productName") String productName, @PathVariable("num") Integer num) {
-        System.out.println("123");
         orderService.order(userName, productName, num);
         storageService.sellProduct(productName, num);
         return "success";

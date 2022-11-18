@@ -6,9 +6,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @EnableDiscoveryClient
 @SpringBootApplication
-public class NacosProducerApplication {
+public class ServerOrderApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(NacosProducerApplication.class, args);
+		SpringApplication.run(ServerOrderApplication.class, args);
 	}
 }
