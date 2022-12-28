@@ -8,6 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Stream;
 
 
 class DSLParserTest {
@@ -107,5 +108,9 @@ class DSLParserTest {
 //
 //        Constructor<TestBean> constructor = TestBean.class.getDeclaredConstructor();
 //        TestBean testBean2 = constructor.newInstance();
+    }
+    @Test
+    void lambdaTest(){
+         Stream.of("b","c","a").peek(System.out::println).sorted().forEach(System.out::println);
     }
 }
