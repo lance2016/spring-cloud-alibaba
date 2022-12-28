@@ -18,7 +18,6 @@
         <spring-cloud-starter-alibaba-nacos-discovery.version>2.2.3.RELEASE</spring-cloud-starter-alibaba-nacos-discovery.version>
         <!-- 修改feign版本可能导致报错 -->
         <spring-cloud-starter-openfeign.version>2.2.1.RELEASE</spring-cloud-starter-openfeign.version>
-        <spring-cloud-starter-alibaba-sentinel.version>0.2.1.RELEASE</spring-cloud-starter-alibaba-sentinel.version>
         <spring-boot-starter-actuator.version>2.2.3.RELEASE</spring-boot-starter-actuator.version>
     </properties>
     <dependencies>
