@@ -1,5 +1,6 @@
 package com.cloud.nacos.consumer.feign.fallback;
 
+import com.cloud.nacos.common.param.ProductParam;
 import com.cloud.nacos.consumer.feign.StorageService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -16,7 +17,7 @@ import org.springframework.stereotype.Component;
 public class StorageFallBack implements StorageService {
 
     @Override
-    public String sellProduct(String productName, Integer num) {
+    public String sellProduct(ProductParam param) {
         String message = "检查库存服务挂了";
         log.info(message);
         return message;

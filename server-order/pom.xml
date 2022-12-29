@@ -18,9 +18,6 @@
         <java.version>1.8</java.version>
         <spring-cloud-starter-alibaba-nacos-discovery.version>2.2.3.RELEASE
         </spring-cloud-starter-alibaba-nacos-discovery.version>
-        <mybatisplus.starter.version>3.4.1</mybatisplus.starter.version>
-        <mybatisplus.generator.version>3.4.1</mybatisplus.generator.version>
-        <org.freemarker.version>2.3.28</org.freemarker.version>
     </properties>
 
     <dependencies>

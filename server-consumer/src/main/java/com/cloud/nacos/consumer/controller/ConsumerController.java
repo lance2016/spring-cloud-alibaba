@@ -1,6 +1,7 @@
 package com.cloud.nacos.consumer.controller;
 
 import com.cloud.nacos.common.param.OrderParam;
+import com.cloud.nacos.common.param.ProductParam;
 import com.cloud.nacos.common.util.JsonUtil;
 import com.cloud.nacos.consumer.feign.OrderService;
 import com.cloud.nacos.consumer.feign.StorageService;
@@ -36,7 +37,8 @@ public class ConsumerController {
         retMap.put("order", orderMessage);
         log.info("订单系统消息 : " + orderMessage);
 //        减库存
-        String productMessage = storageService.sellProduct(param.getProductName(), param.getNum());
+        ProductParam productParam = new ProductParam(param.getProductName(), param.getNum());
+        String productMessage = storageService.sellProduct(productParam);
         retMap.put("product", productMessage);
         log.info("库存系统消息：" + productMessage);
 //        扣款 TODO

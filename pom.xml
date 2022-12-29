@@ -17,6 +17,9 @@
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud-alibaba.version>2.2.9.RELEASE</spring-cloud-alibaba.version>
+        <mybatisplus.starter.version>3.4.1</mybatisplus.starter.version>
+        <mybatisplus.generator.version>3.4.1</mybatisplus.generator.version>
+        <org.freemarker.version>2.3.28</org.freemarker.version>
     </properties>
 
     <modules>
