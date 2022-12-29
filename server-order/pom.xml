@@ -1,34 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>com.spring.cloud</groupId>
-		<artifactId>spring-cloud</artifactId>
-		<version>1.0-SNAPSHOT</version>
-	</parent>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.spring.cloud</groupId>
+        <artifactId>spring-cloud</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
-	<groupId>com.cloud.nacos.producer</groupId>
-	<artifactId>server-order</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>server-order</name>
-	<description>Demo project for Spring Boot</description>
+    <groupId>com.cloud.nacos.producer</groupId>
+    <artifactId>server-order</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>server-order</name>
+    <description>Demo project for Spring Boot</description>
 
-	<properties>
-		<java.version>1.8</java.version>
-		<spring-cloud-starter-alibaba-nacos-discovery.version>2.2.3.RELEASE</spring-cloud-starter-alibaba-nacos-discovery.version>
-	</properties>
+    <properties>
+        <java.version>1.8</java.version>
+        <spring-cloud-starter-alibaba-nacos-discovery.version>2.2.3.RELEASE
+        </spring-cloud-starter-alibaba-nacos-discovery.version>
+        <mybatisplus.starter.version>3.4.1</mybatisplus.starter.version>
+        <mybatisplus.generator.version>3.4.1</mybatisplus.generator.version>
+        <org.freemarker.version>2.3.28</org.freemarker.version>
+    </properties>
 
-	<dependencies>
+    <dependencies>
+        <!--		 https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>8.0.31</version>
+        </dependency>
 
-		<dependency>
-			<groupId>com.alibaba.cloud</groupId>
-			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-			<version>${spring-cloud-starter-alibaba-nacos-discovery.version}</version>
-		</dependency>
 
-	</dependencies>
-
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatisplus.starter.version}</version>
+        </dependency>
+        <!--		代码生成器-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>${mybatisplus.generator.version}</version>
+        </dependency>
+        <!--		添加 模板引擎-->
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>${org.freemarker.version}</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
 
 </project>

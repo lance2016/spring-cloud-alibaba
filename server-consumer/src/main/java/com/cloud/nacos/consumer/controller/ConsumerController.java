@@ -1,10 +1,12 @@
 package com.cloud.nacos.consumer.controller;
 
+import com.cloud.nacos.common.param.OrderParam;
+import com.cloud.nacos.common.util.JsonUtil;
 import com.cloud.nacos.consumer.feign.OrderService;
 import com.cloud.nacos.consumer.feign.StorageService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -25,17 +27,18 @@ public class ConsumerController {
     private StorageService storageService;
 
 
-    @GetMapping("/buy/{userName}/{productName}/{num}")
-    public Map<String,Object> buy(@PathVariable("userName") String userName, @PathVariable("productName") String productName, @PathVariable("num") Integer num) {
+    @PostMapping("/buy")
+    public Map<String, Object> buy(@RequestBody OrderParam param) {
+        log.info("请求体:" + JsonUtil.toJson(param));
         Map<String, Object> retMap = new LinkedHashMap<>();
 //        下单
-        String orderMessage = orderService.order(userName, productName, num);
+        String orderMessage = orderService.order(param);
         retMap.put("order", orderMessage);
-        log.info("订单系统消息 : "+orderMessage);
+        log.info("订单系统消息 : " + orderMessage);
 //        减库存
-        String productMessage = storageService.sellProduct(productName, num);
+        String productMessage = storageService.sellProduct(param.getProductName(), param.getNum());
         retMap.put("product", productMessage);
-        log.info("库存系统消息："+ productMessage);
+        log.info("库存系统消息：" + productMessage);
 //        扣款 TODO
         return retMap;
     }

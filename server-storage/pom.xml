@@ -17,11 +17,11 @@
         <spring-cloud-starter-alibaba-nacos-discovery.version>2.2.3.RELEASE</spring-cloud-starter-alibaba-nacos-discovery.version>
     </properties>
     <dependencies>
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-            <version>${spring-cloud-starter-alibaba-nacos-discovery.version}</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
+<!--            <version>${spring-cloud-starter-alibaba-nacos-discovery.version}</version>-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>
