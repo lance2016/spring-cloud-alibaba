@@ -5,6 +5,7 @@ import com.cloud.nacos.common.param.ProductParam;
 import com.cloud.nacos.common.util.JsonUtil;
 import com.cloud.nacos.consumer.feign.OrderService;
 import com.cloud.nacos.consumer.feign.StorageService;
+import com.cloud.nacos.consumer.service.ConsumerService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,14 +24,17 @@ import java.util.Map;
 public class ConsumerController {
 
     @Resource
+    ConsumerService consumerService;
+    @Resource
     private OrderService orderService;
     @Resource
     private StorageService storageService;
 
 
     @PostMapping("/buy")
-    public Map<String, Object> buy(@RequestBody OrderParam param) {
+    public Map<String, Object> buy(@RequestBody OrderParam param) throws Exception {
         log.info("请求体:" + JsonUtil.toJson(param));
+        consumerService.checkZk("/spring/consumer");
         Map<String, Object> retMap = new LinkedHashMap<>();
 //        下单
         String orderMessage = orderService.order(param);

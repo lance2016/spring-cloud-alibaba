@@ -14,6 +14,10 @@
 1. 集成feign 服务调用
 2. 集成负载均衡
 
+## 数据库
+1. MySQL (MyBatis Plus)
+2. Redis (Lettuce)
 
+## Zookeeper
 
 持续集成中...
