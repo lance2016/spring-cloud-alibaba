@@ -9,6 +9,7 @@ import com.cloud.server.order.property.AppProperty;
 import com.cloud.server.order.service.OrderService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.env.Environment;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -26,19 +27,24 @@ import javax.annotation.Resource;
 public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements OrderService {
 
     @Resource
-    AppProperty appProperty;
+    private AppProperty appProperty;
 
     @Resource
-    OrderMapper orderMapper;
+    private OrderMapper orderMapper;
 
     @Resource
-    Environment environment;
+    private Environment environment;
+
+    @Resource
+    private RedisTemplate<String, Object> redisTemplate;
 
     public String getPort() {
         return environment.getProperty("local.server.port");
     }
 
-//    具体业务逻辑在这里写，不要在controller里面
+    /**
+     * 具体业务逻辑在这里写，不要在controller里面
+     */
     @Override
     public String saveOrder(OrderParam param) {
         log.info(JsonUtil.toJson(param));
@@ -49,6 +55,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         order.setBuyer(param.getBuyer());
         order.setProductName(param.getProductName());
         order.setNum(param.getNum());
+        redisTemplate.opsForValue().set("order", order);
         orderMapper.insert(order);
         String message = String.format("%s:save success",getPort());
         log.info(message);
