@@ -19,6 +19,7 @@
         <!-- 修改feign版本可能导致报错 -->
         <spring-cloud-starter-openfeign.version>2.2.1.RELEASE</spring-cloud-starter-openfeign.version>
         <spring-boot-starter-actuator.version>2.2.3.RELEASE</spring-boot-starter-actuator.version>
+        <elasticsearch.version>7.13.3</elasticsearch.version>
     </properties>
     <dependencies>
         <!-- nacos-discovert -->
@@ -81,6 +82,21 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+            <version>2.2.0.RELEASE</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-elasticsearch -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+            <version>2.5.2</version>
+        </dependency>
+
     </dependencies>
 
     <build>

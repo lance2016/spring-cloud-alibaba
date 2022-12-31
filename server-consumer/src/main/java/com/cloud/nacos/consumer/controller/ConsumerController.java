@@ -35,6 +35,7 @@ public class ConsumerController {
     public Map<String, Object> buy(@RequestBody OrderParam param) throws Exception {
         log.info("请求体:" + JsonUtil.toJson(param));
         consumerService.checkZk("/spring/consumer");
+        consumerService.createDocument();
         Map<String, Object> retMap = new LinkedHashMap<>();
 //        下单
         String orderMessage = orderService.order(param);

@@ -6,7 +6,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate;
 
+import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -50,5 +52,16 @@ class ServerConsumerApplicationTests {
     class ColumnType{
         private String datatype;
         private Integer op;
+    }
+
+//    @Resource
+//    private PersonRepository personRepository;
+
+    @Resource
+    private ElasticsearchRestTemplate elasticsearchRestTemplate;
+
+    @Test
+    void test2(){
+        System.out.println(elasticsearchRestTemplate);
     }
 }
