@@ -22,4 +22,6 @@
 
 ## Elasticsearch
 
+## RabbitMQ
+
 持续集成中...
